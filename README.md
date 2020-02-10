@@ -11,7 +11,7 @@ UI de usuários com angular (consultando API Fake)
 <p>Caso você não tenha o Node instalado basta baixar em https://nodejs.org/en/.</p>
 
 <strong>Não tem o Angular CLI instalado?</strong>
-<p>Caso você não tenha o Angular CLI instalado basta acessar e seguir o passo a passo.</p>
+<p>Caso você não tenha o Angular CLI instalado basta acessar https://cli.angular.io/ e seguir o passo a passo.</p>
 
 <h3>Como executar?</h3>
 
@@ -19,10 +19,10 @@ UI de usuários com angular (consultando API Fake)
 
 Tudo pronto!
 Agora basta acessar http://localhost:4200 e inserir os seguintes dados na página de login:
-<strong>Email: </strong>eve.holt@reqres.in
-<strong>Senha: </strong>cityslicka
+* <strong>Email: </strong>eve.holt@reqres.in
+* <strong>Senha: </strong>cityslicka
 
 
-Obs: O e-mail que estava na prova não estava funcionando, pesquisei e vi que eles alteraram o e-mail de login da API.
+<p><strong>Obs:</strong> O e-mail que estava na prova não estava funcionando, pesquisei e vi que eles alteraram o e-mail de login da API.</p>
 
 Obrigado =)
