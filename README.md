@@ -2,7 +2,7 @@ MyApp UI Angular
 -----------------------
 UI de usuários com angular (consultando API Fake)
 
-* <strong>Informo que este foi o meu PRIMEIRO contato com a tecnologia Angular. Enfrentei algumas dificuldades ao realizar a prova, mas acredito que tive um bom desempenho. Segue abaixo informações de como executar</strong>
+* <strong>Informo que este foi o meu PRIMEIRO contato com a tecnologia Angular. Enfrentei algumas dificuldades ao realizar a prova, mas acredito que tive um bom desempenho.</strong>
 
 <h3>Ferramentas necessárias</h3>
 <p>Iremos utilizar o Node.js e o Angular CLI.</p>
