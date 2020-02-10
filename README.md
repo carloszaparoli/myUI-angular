@@ -17,8 +17,8 @@ UI de usuários com angular (consultando API Fake)
 
 <p>O primeiro passo é abrir o terminal na pasta do projeto e digitar o comando <strong>npm install</strong> para baixar as bibliotecas necessárias (node_modules). Após isso basta executar o comando <strong>ng serve</strong> para compilar a aplicação. Após a compilação, geralmente a aplicação irá rodar em http://localhost:4200.</p>
 
-Tudo pronto!
-Agora basta acessar http://localhost:4200 e inserir os seguintes dados na página de login:
+<p>Tudo pronto!</p>
+<p>Agora basta acessar http://localhost:4200 e inserir os seguintes dados na página de login:</p>
 * <strong>Email: </strong>eve.holt@reqres.in
 * <strong>Senha: </strong>cityslicka
 
