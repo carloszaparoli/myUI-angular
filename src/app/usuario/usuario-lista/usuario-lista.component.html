@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Usuários</h1>
+    <ul class="listaUsuarios">
+        <li *ngFor="let u of usuarios | paginate: config"
+            [attr.id]="u.id">
+            <img src="{{u.avatar}}" />
+            <p><strong>id: </strong>{{u.id}}</p>
+            <p><strong>Nome: </strong>{{u.first_name}}</p>
+            <p><strong>Sobrenome: </strong>{{u.last_name}}</p>
+            <p><strong>E-mail: </strong>{{u.email}}</p>
+            <div class="blocoBtnsAcoes">
+                <a class="pButton secundario" [routerLink]="['/users', u.id]">Editar</a>
+                <button class="pButton excluir" (click)="excluir(u.id)">Excluir</button>
+            </div>
+        </li>
+    </ul>
+    <pagination-controls (pageChange)="listar($event)" previousLabel="Anterior" nextLabel="Próximo"
+        directionLinks="true" autohide="true"></pagination-controls>
+</div>

@@ -1,0 +1,59 @@
+.listaUsuarios {
+    font-size: 1.6em;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.listaUsuarios li {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px 20px 10px;
+    padding: 20px;
+}
+
+.listaUsuarios li img {
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;    
+}
+
+.listaUsuarios li .blocoBtnsAcoes {
+    display: flex;
+    margin: 0 -5px;
+}
+
+.listaUsuarios li .blocoBtnsAcoes .pButton {
+    width: 50%;
+    margin: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    .listaUsuarios {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+.ngx-pagination {
+    padding: 0;
+    font-size: 18px!important;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .listaUsuarios {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .listaUsuarios {
+        grid-template-columns: 100%;
+    }
+}

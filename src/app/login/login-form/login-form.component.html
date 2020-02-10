@@ -1,0 +1,23 @@
+<link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+<div class="conteudoLogin">
+    <a id="logo" routerLink="/login">MyUI</a>
+    <div class="boxLogin">
+        <form>
+            <h2 class="titulo">Acesso ao sistema</h2>
+            <p class="txt">Informe seu e-mail e senha para entrar</p>
+            <div class="linha">
+                <div class="coluna boxInput">
+                    <label class="pLabel">E-mail</label>
+                    <input type="text" [(ngModel)]="email" name="email" class="pInput" placeholder="Ex: eve.holt@reqres.in">
+                </div>
+            </div>
+            <div class="linha">
+                <div class="coluna boxInput">
+                    <label class="pLabel">Senha</label>
+                    <input type="password" [(ngModel)]="senha" name="senha" class="pInput" placeholder="Ex: cityslicka">
+                </div>
+            </div>
+            <button type="submit" class="pButton primario btn-block" style="width: 100%" (click)="entrar()">Entrar</button>
+        </form>
+    </div>
+</div>

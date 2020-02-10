@@ -1,0 +1,45 @@
+.conteudoLogin {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3358f4;
+    background: linear-gradient(0deg,#3358f4 0,#1d8cf8 100%);
+}
+
+#logo {
+    display: inline;
+    font-size: 40px;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+    font-family: 'Russo One', sans-serif;
+    margin-right: 30px;
+    position: absolute;
+    top: 40px;
+}
+
+.boxLogin {
+    width: 400px;
+    background-color: #FFF;
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.boxLogin .titulo {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 0;
+}
+
+.boxLogin .txt {
+    text-align: center;
+    font-size: 1.6em;
+}
+
+@media screen and (max-width: 400px) {
+    .boxLogin {
+        width: 95%;
+    }
+}

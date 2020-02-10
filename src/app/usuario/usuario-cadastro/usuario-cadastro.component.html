@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Edição de Usuário</h1>
+    <form #f="ngForm" autocomplete="off" (ngSubmit)="atualizarUsuario(f)">
+        <div class="blocoImagemCadastro">
+            <img [src]="usuario.avatar" width="200px"/>
+        </div>
+        <div class="linha">
+            <div class="coluna-4 boxInput">
+                <label class="pLabel">Nome</label>
+                <input type="text" [(ngModel)]="usuario.first_name" name="first_name" class="pInput" placeholder="Ex: João">
+            </div>
+            <div class="coluna-4 boxInput">
+                <label class="pLabel">Sobrenome</label>
+                <input type="text" [(ngModel)]="usuario.last_name" name="last_name" class="pInput" placeholder="Ex: da Silva">
+            </div>
+            <div class="coluna-4 boxInput">
+                <label class="pLabel">E-mail</label>
+                <input type="email" disabled="true" [(ngModel)]="usuario.email" name="email" class="pInput" placeholder="Ex: joao@email.com">
+            </div>
+        </div>
+        
+        <div class="blocoBotoes">
+            <a routerLink="/users" class="pButton secundario">Voltar</a>
+            <button class="pButton primario">Salvar</button>
+        </div>
+    </form>
+</div>
