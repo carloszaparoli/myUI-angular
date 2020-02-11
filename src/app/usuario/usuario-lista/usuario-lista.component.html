@@ -4,7 +4,6 @@
         <li *ngFor="let u of usuarios | paginate: config"
             [attr.id]="u.id">
             <img src="{{u.avatar}}" />
-            <p><strong>id: </strong>{{u.id}}</p>
             <p><strong>Nome: </strong>{{u.first_name}}</p>
             <p><strong>Sobrenome: </strong>{{u.last_name}}</p>
             <p><strong>E-mail: </strong>{{u.email}}</p>

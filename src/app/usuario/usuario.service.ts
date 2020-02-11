@@ -39,7 +39,7 @@ export class UsuarioService {
     httpHeaders.append('Content-Type', 'application/json');
     
     return this.http.put<Usuario>(`${this.usuariosUrl}/${usuario.id}`,
-        JSON.stringify(usuario),
+        usuario,
         { 
           headers: httpHeaders,
           params: {
@@ -49,6 +49,7 @@ export class UsuarioService {
         })
       .toPromise()
       .then(response => {
+        // Response Http com status 200 e body
         console.log(response);
       });
   }
@@ -76,7 +77,9 @@ export class UsuarioService {
       observe: 'response'
      })
       .toPromise()
-      .then(() => {       
+      .then(response => {
+        // Response Http com status 204
+        console.log(response);
       });
   }
 }
