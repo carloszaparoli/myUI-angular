@@ -17,6 +17,12 @@
     margin-right: 30px;
     position: absolute;
     top: 40px;
+    transition: all .15s ease-in 0s;
+}
+
+#logo:hover {
+    transform: translateY(-1px);
+    -webkit-transform: translateY(-1px);
 }
 
 .boxLogin {

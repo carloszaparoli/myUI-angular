@@ -17,6 +17,12 @@
     font-weight: bold;
     font-family: 'Russo One', sans-serif;
     margin-right: 30px;
+    transition: all .15s ease-in 0s;
+}
+
+#logo:hover {
+    transform: translateY(-1px);
+    -webkit-transform: translateY(-1px);
 }
 
 .menu {

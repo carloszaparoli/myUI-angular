@@ -9,9 +9,7 @@ export class NeedAuthGuard implements CanActivate {
   constructor(private clienteLoginService: ClienteLoginService, private router: Router) {
   }
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-
-    const redirectUrl = route['_routerState']['url'];
+  canActivate() {
 
     if (this.clienteLoginService.logado()) {
       return true;

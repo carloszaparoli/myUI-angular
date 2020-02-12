@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { ToastyConfig } from 'ng2-toasty';
-import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +12,6 @@ export class AppComponent {
   constructor(
     private router: Router
   ){}
-
 
   mostraMenu() {
     return this.router.url !== '/login';

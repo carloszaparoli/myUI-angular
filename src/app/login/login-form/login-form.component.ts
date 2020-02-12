@@ -37,6 +37,7 @@ export class LoginFormComponent implements OnInit {
       },
       response => {
         this.toasty.error('Erro ao fazer login.');
+        console.log(response);
       });
   }
 
