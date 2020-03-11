@@ -1,8 +1,8 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {NgxPaginationModule} from 'ngx-pagination';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { ToastyModule } from 'ng2-toasty';
 
@@ -15,6 +15,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { PaginaNaoEncontradaComponent } from './core/pagina-nao-encontrada.component';
 import { LoginFormComponent } from './login/login-form/login-form.component';
 import { NeedAuthGuard } from './login/auth.guard';
+import { Interceptor } from './login/interceptor.module';
+import { LoaderComponent } from './loader/loader.component';
+import { LoaderService } from './loader/loader.service';
+import { LoaderInterceptor } from './loader/loader.interceptor';
 
 
 const routes: Routes = [
@@ -33,18 +37,20 @@ const routes: Routes = [
     UsuarioListaComponent,
     UsuarioCadastroComponent,
     PaginaNaoEncontradaComponent,
-    LoginFormComponent    
+    LoginFormComponent,
+    LoaderComponent    
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    Interceptor,
     HttpClientModule,
-    NgxPaginationModule,
+    NgxPaginationModule,    
     RouterModule.forRoot(routes),
     
     ToastyModule.forRoot()
   ],
-  providers: [ UsuarioService, NeedAuthGuard ],
+  providers: [ UsuarioService, NeedAuthGuard, LoaderService, { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,7 +4,7 @@ import { ToastyService } from 'ng2-toasty';
 
 import { UsuarioService } from '../usuario.service';
 import { Usuario } from 'src/app/model/usuario';
-import { FormControl, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-usuario-cadastro',
@@ -33,7 +33,6 @@ export class UsuarioCadastroComponent implements OnInit {
     this.usuarioService.buscarPorId(id)
      .then(usuario => {
         this.usuario = usuario['data'];
-        //console.log(usuario);
      });
   }
 

@@ -1,0 +1,27 @@
+.loader-overlay {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.loader-spin {
+    box-sizing: border-box;
+    background-color: #FFF;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #5F5F5F;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.loader-spin p {
+    margin-top: 0;
+}

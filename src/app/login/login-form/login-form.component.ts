@@ -43,6 +43,6 @@ export class LoginFormComponent implements OnInit {
 
   ngOnInit(): void {
     localStorage.clear();
+    console.log('Deslogado!');
   }
-
 }

@@ -1,0 +1,26 @@
+<svg width="0" height="0" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <symbol id="setaPrimeiro" viewBox="0 0 11.41 12">
+            <g id="Group_117" data-name="Group 117" transform="translate(262.705 486.705) rotate(180)">
+                <path id="ic_expand_less_24px" d="M12,8,6,14l1.41,1.41L12,10.83l4.59,4.58L18,14Z" transform="translate(266.705 468.705) rotate(90)"/>
+                <path id="ic_expand_less_24px-2" data-name="ic_expand_less_24px" d="M12,8,6,14l1.41,1.41L12,10.83l4.59,4.58L18,14Z" transform="translate(270.705 468.705) rotate(90)"/>
+            </g>
+        </symbol>
+
+        <symbol id="setaAnterior" viewBox="0 0 7.41 12">
+            <path id="ic_expand_less_24px" d="M12,8,6,14l1.41,1.41L12,10.83l4.59,4.58L18,14Z" transform="translate(-8 18) rotate(-90)"/>
+        </symbol>
+
+        <symbol id="setaProximo" viewBox="10187.295 474.705 7.41 12">
+            <path id="ic_expand_less_24px" class="cls-1" d="M12,8,6,14l1.41,1.41L12,10.83l4.59,4.58L18,14Z" transform="translate(10202.705 468.705) rotate(90)"/>
+        </symbol>
+
+
+        <symbol id="setaUltimo" viewBox="0 0 11.41 12">
+            <g id="Group_117" data-name="Group 117" transform="translate(-251.295 -474.705)">
+                <path id="ic_expand_less_24px" d="M12,8,6,14l1.41,1.41L12,10.83l4.59,4.58L18,14Z" transform="translate(266.705 468.705) rotate(90)"/>
+                <path id="ic_expand_less_24px-2" data-name="ic_expand_less_24px" d="M12,8,6,14l1.41,1.41L12,10.83l4.59,4.58L18,14Z" transform="translate(270.705 468.705) rotate(90)"/>
+            </g>
+        </symbol>
+    </defs>
+</svg>

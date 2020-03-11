@@ -1,18 +1,49 @@
 <div class="container">
     <h1>Usuários</h1>
     <ul class="listaUsuarios">
-        <li *ngFor="let u of usuarios | paginate: config"
-            [attr.id]="u.id">
+        <li *ngFor="let u of usuarios" [attr.id]="u.id">
             <img src="{{u.avatar}}" />
             <p><strong>Nome: </strong>{{u.first_name}}</p>
             <p><strong>Sobrenome: </strong>{{u.last_name}}</p>
             <p><strong>E-mail: </strong>{{u.email}}</p>
             <div class="blocoBtnsAcoes">
                 <a class="pButton secundario" [routerLink]="['/users', u.id]">Editar</a>
-                <button class="pButton excluir" (click)="excluir(u.id)">Excluir</button>
+                <button class="pButton excluir" (click)="excluir(u)">Excluir</button>
             </div>
         </li>
     </ul>
-    <pagination-controls (pageChange)="listar($event)" previousLabel="Anterior" nextLabel="Próximo"
-        directionLinks="true" autohide="true"></pagination-controls>
+    
+    <ul *ngIf="config.paginas && config.paginas.length" class="paginacao">
+        <li class="pagina-item">
+            <a [routerLink]="['/users']" [queryParams]="{ page: 1 }" [ngClass]="{disabled:config.paginaAtual === 1}" class="pagina-link primeiro-link">
+                <svg width="12px" height="12px">
+                    <use href="../../../assets/img/sprites.svg#setaPrimeiro"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="pagina-item">
+            <a [routerLink]="['/users']" [queryParams]="{ page: config.paginaAtual - 1 }" [ngClass]="{disabled:config.paginaAtual === 1}" class="pagina-link anteiror-link">
+                <svg width="12px" height="12px">
+                    <use href="../../../assets/img/sprites.svg#setaAnterior"></use>
+                </svg>
+            </a>
+        </li>
+        <li *ngFor="let page of config.paginas" class="pagina-item">
+            <a [routerLink]="['/users']" [queryParams]="{page:page}" [ngClass]="{active:config.paginaAtual === page}" class="pagina-link pagina-numero">{{page}}</a>
+        </li>
+        <li class="pagina-item">
+            <a [routerLink]="['/users']" [queryParams]="{ page: config.paginaAtual + 1 }" [ngClass]="{disabled:config.paginaAtual === config.totalPaginas}" class="pagina-link proximo-link">
+                <svg width="12px" height="12px">
+                    <use href="../../../assets/img/sprites.svg#setaProximo"></use>
+                </svg>
+            </a>
+        </li>
+        <li class="pagina-item">
+            <a [routerLink]="['/users']" [queryParams]="{ page: config.totalPaginas }" [ngClass]="{disabled:config.paginaAtual === config.totalPaginas}" class="pagina-link ultimo-link">
+                <svg width="12px" height="12px">
+                    <use href="../../../assets/img/sprites.svg#setaUltimo"></use>
+                </svg>
+            </a>
+        </li>
+    </ul>
 </div>

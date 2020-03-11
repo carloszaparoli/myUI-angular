@@ -237,8 +237,12 @@ h1 {
 }
 
 .blocoImagemCadastro {
-    text-align: center;
+    margin: 0 auto;
     margin-bottom: 50px;
+    height: 200px;
+    width: 200px;
+    background-color: #ccc;
+    border-radius: 10px;
 }
 
 .blocoImagemCadastro img {

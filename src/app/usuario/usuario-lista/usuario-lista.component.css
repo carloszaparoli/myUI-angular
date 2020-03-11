@@ -35,16 +35,66 @@
     margin: 5px;
 }
 
+.paginacao {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.pagina-item {
+    margin: 0 5px;   
+}
+
+.pagina-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #FFF;
+    box-shadow: 0px 3px 6px #CECECE;
+    text-align: center;
+    padding: 6px 0;
+    display: block;
+    color: #5F5F5F;
+    text-decoration: none;
+    transition: all 180ms ease-in 0s;
+}
+
+.pagina-link:hover {
+    background-color: #1d8cf8;
+    color: #FFF;
+}
+
+.pagina-link svg {
+    fill: #5F5F5F;
+    transition: all 180ms ease-in 0s;
+}
+
+.pagina-link:hover svg {
+    fill: #FFF;
+}
+
+.pagina-link.active {
+    background-color: #1d8cf8;
+    color: #FFF;
+}
+
+.pagina-link.disabled {
+    pointer-events: none;
+    cursor: auto;
+    opacity: 0.5;
+}
+
+.pagina-numero {
+    
+}
+
 @media screen and (max-width: 1024px) {
     .listaUsuarios {
         grid-template-columns: 33% 33% 33%;
     }
-}
-
-.ngx-pagination {
-    padding: 0;
-    font-size: 18px!important;
-    text-align: center;
 }
 
 @media screen and (max-width: 768px) {
