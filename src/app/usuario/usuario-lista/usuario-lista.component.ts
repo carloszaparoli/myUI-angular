@@ -3,6 +3,8 @@ import { UsuarioService } from '../usuario.service';
 import { ToastyService } from 'ng2-toasty';
 import { Usuario } from 'src/app/model/usuario';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DialogComponent } from 'src/app/dialog/dialog.component';
 
 @Component({
   selector: 'app-usuario-lista',
@@ -18,8 +20,9 @@ export class UsuarioListaComponent implements OnInit {
     private usuarioService: UsuarioService,
     private route: ActivatedRoute,
     private toasty: ToastyService,
-    private router: Router   
-  ) {}
+    private router: Router,
+    public dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(x => this.listar(x.page || 1));
@@ -28,32 +31,43 @@ export class UsuarioListaComponent implements OnInit {
   listar(pagina: number) {
     this.usuarioService.listar(pagina)
       .then(resultado => {
-          this.paginas = [];
-          this.usuarios = resultado.usuarios;
-          for (let index = 1; index <= resultado.totalPaginas; index++) {
-            this.paginas.push(index);
-          }
-          this.config = {
-            totalItems: resultado.total,
-            paginaAtual: resultado.paginaAtual,
-            totalPaginas: resultado.totalPaginas,
-            itensPorPagina: resultado.itensPorPagina,
-            paginas: this.paginas
-          }
-          if (pagina < 1 || pagina > this.config.totalPaginas) {
-            this.router.navigate(['/404']);
-          }
+        this.paginas = [];
+        this.usuarios = resultado.usuarios;
+        for (let index = 1; index <= resultado.totalPaginas; index++) {
+          this.paginas.push(index);
+        }
+        this.config = {
+          totalItems: resultado.total,
+          paginaAtual: resultado.paginaAtual,
+          totalPaginas: resultado.totalPaginas,
+          itensPorPagina: resultado.itensPorPagina,
+          paginas: this.paginas
+        }
+        if (pagina < 1 || pagina > this.config.totalPaginas) {
+          this.router.navigate(['/404']);
+        }
       });
   }
 
   excluir(usuario: Usuario) {
-    if (confirm("Tem certeza que deseja deletar este registro?")) {
-      this.usuarioService.excluir(usuario)
-        .then(resultado => {
-          let posicao = this.usuarios.indexOf(usuario);  
-          this.usuarios.splice(posicao, 1);  
-          this.toasty.success("Usuário excluído com sucesso!");
-        });
-    }
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.data = {
+      id: 1,
+      title: 'Angular For Beginners'
+    };
+    const dialogRef = this.dialog.open(DialogComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result)
+      if (result) {
+        this.usuarioService.excluir(usuario)
+          .then(resultado => {
+            let posicao = this.usuarios.indexOf(usuario);
+            this.usuarios.splice(posicao, 1);
+            this.toasty.success("Usuário excluído com sucesso!");            
+          });
+      }
+    });
   }
 }
