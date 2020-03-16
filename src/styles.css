@@ -248,15 +248,110 @@ h1 {
 .blocoImagemCadastro img {
     border-radius: 10px;
 }
-
-.ngx-pagination {
-    padding: 0;
-    font-size: 16px!important;    
-    text-align: center;
+/* DIALOG MATERIAL */
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }
 
-.ngx-pagination a {
-    color: #5F5F5F!important;
+.cdk-overlay-container {
+    position: fixed;
+    z-index: 1000;
+}
+
+.cdk-overlay-backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-transition: opacity .4s cubic-bezier(.25,.8,.25,1);
+    transition: opacity .4s cubic-bezier(.25,.8,.25,1);
+    opacity: 0;
+}
+
+.cdk-overlay-dark-backdrop {
+    background: rgba(0,0,0,.32);
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+    opacity: 1;
+}
+
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.cdk-global-overlay-wrapper, .cdk-overlay-pane {
+    display: -webkit-box;
+    display: flex;
+    position: absolute;
+    z-index: 1000;
+}
+
+.mat-dialog-container {
+    padding: 0!important;
+    background-color: #FFF;
+    max-width: 450px;
+}
+
+.mat-dialog-content {
+    font-size: 16px;
+}
+
+.modal-header {
+    padding: 12px;    
+    border-bottom: 1px solid #CECECE;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-header .modal-icon-close {
+    padding-top: 5px;
+    cursor: pointer;
+    transition: all .15s ease-in 0s;
+}
+
+.modal-header .modal-icon-close:hover {
+    transform: translateY(-1px);
+    -webkit-transform: translateY(-1px);
+}
+
+.modal-header .modal-icon-close svg {
+    fill: #C4C4C4;
+}
+
+.modal-header .title {
+    margin: 0;
+    font-size: 16px;
+}
+
+.modal-body {
+    padding: 12px;
+}
+
+.modal-body .message {
+    font-size: 16px;
+}
+
+.modal-footer {
+    padding: 12px;
+}
+
+.modal-footer .blocoBotoes button {
+    margin-bottom: 0;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {

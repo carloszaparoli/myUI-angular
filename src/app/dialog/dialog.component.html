@@ -1,6 +1,17 @@
-<h2 mat-dialog-title>{{modalTitle}}</h2>
-<mat-dialog-content>Do you wish to continue previous shopping?</mat-dialog-content>
-<mat-dialog-actions>
-<button mat-button mat-dialog-close>No</button>
-<button mat-button [mat-dialog-close]="true">Yes</button>
-</mat-dialog-actions>
+<div class="modal-header">
+    <h2 class="title">{{titulo}}</h2>
+    <div mat-dialog-close class="modal-icon-close">
+        <svg width="15px" height="15px">
+            <use href="../../../assets/img/sprites.svg#fechar"></use>
+        </svg>
+    </div>
+</div>
+<div class="modal-body">
+    <p class="message">{{mensagem}}</p>
+</div>
+<div class="modal-footer">
+    <div class="blocoBotoes">
+        <button class="pButton secundario" mat-dialog-close>Não</button>
+        <button class="pButton primario" [mat-dialog-close]="true">Sim</button>
+    </div>
+</div>

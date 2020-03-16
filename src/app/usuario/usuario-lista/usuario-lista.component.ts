@@ -55,7 +55,8 @@ export class UsuarioListaComponent implements OnInit {
     dialogConfig.autoFocus = true;
     dialogConfig.data = {
       id: 1,
-      title: 'Angular For Beginners'
+      title: 'Excluir',
+      message: "Tem certeza que deseja excluir este usuário?"
     };
     const dialogRef = this.dialog.open(DialogComponent, dialogConfig);
     dialogRef.afterClosed().subscribe(result => {

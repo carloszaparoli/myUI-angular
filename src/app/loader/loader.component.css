@@ -4,8 +4,8 @@
     top: 0;
     left: 0;
     height: 100vh;
-    background-color: #000;
-    opacity: 0.5;
+    background: rgba(0,0,0,.32);
+    opacity: 1;
 }
 
 .loader-spin {

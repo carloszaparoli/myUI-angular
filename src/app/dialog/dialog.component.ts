@@ -7,9 +7,13 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent implements OnInit {
-  modalTitle: string;
+  titulo: string;
+  mensagem: string;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) { 
+    this.titulo = data.title;
+    this.mensagem = data.message;
+  }
 
   ngOnInit(): void {
   }
